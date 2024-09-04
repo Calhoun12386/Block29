@@ -1,68 +1,82 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Styling for the container that holds the player cards. */
+.players-container {
+  display: flex; /* The player cards are displayed using flexbox. */
+  flex-wrap: wrap; /* The player cards will wrap onto the next line if there is not enough space. */
+  justify-content: center; /* The player cards are centered on the line. */
+  padding: 20px; /* Add padding around the container */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Styling for individual player cards. */
+.player-card {
+  width: 360px; /* The width of the card. */
+  height: 450px; /* The height of the card. */
+  margin: 10px; /* The margin around the card. */
+  border: 2px solid black; /* The border around the card. */
+  border-radius: 5px; /* The radius of the card's corners. */
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); /* The shadow effect around the card. */
+  overflow: hidden; /* Any content that goes outside the card will be hidden. */
+  position: relative; /* The card's position is set to relative so it can be moved using the transform property. */
+  transition: transform 0.3s; /* Transition effect for the transform property. */
 }
 
-body {
-  margin: 0;
+
+/* Styling for the container that holds the player's image. */
+.player-image-container {
+  display: flex; /* The image is centered. */
+  align-items: center; /* The image is centered along the horizontal axis. */
+  justify-content: center; /* The image is centered along the vertical axis. */
+  height: 300px; /* The height of the image container. */
+  padding: 1px; /* The padding around the image. */
+}
+
+/* Styling for the player's image. */
+.player-image {
+  width: 250px; /* The width of the image. */
+  height: 250px; /* The height of the image. */
+  object-fit: cover; /* The image will cover the entire area of its container without distorting its aspect ratio. */
+}
+
+/* Styling for the player's details (name, breed, status). */
+.player-details {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column; /* The details are arranged in a column. */
+  align-items: center; /* The details are centered along the vertical axis. */
+  justify-content: center; /* The details are centered along the horizontal axis. */
+  color: black; /* The color of the details text. */
+  font-size: 20px; /* The size of the details text. */
+  text-align: center; /* The details text is centered. */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.player-details p {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-weight: bold; /* Make text bold */
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.player-details h2 {
+  margin: 0 0 8px 0; /* Adjust margin for spacing */
+  text-decoration: underline; /* Underline the text */
+  padding: 0; /* Remove default padding */
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#navbar {
+  display: flex; /* Use flexbox to align links horizontally */
+  justify-content: center; /* Center the navigation links horizontally */
+  background-color:rgb(13, 129, 129); /* Dark background color */
+  padding: 10px; /* Add padding around the navbar */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Style for the navigation links */
+#navbar a {
+  color: white; /* White text color for the links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px 15px; /* Add padding around the links */
+  font-size: 16px; /* Set font size for the links */
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+/* Style for the links on hover */
+#navbar a:hover {
+  background-color: rgb(59, 179, 179); /* Darker background color on hover */
+  border-radius: 5px; /* Rounded corners for the hover effect */
 }
